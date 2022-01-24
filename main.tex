@@ -1,0 +1,27 @@
+ \documentclass[a4paper, openright, oneside]{report}
+\usepackage[T1]{fontenc} % Font encoding, T1 = it
+\usepackage[utf8]{inputenc} % Input encoding - per caratteri particolari
+\usepackage[english]{babel} % Lingua principale italiano, con parti in inglese
+\usepackage{imakeidx}
+\usepackage{graphicx} % Per includere immagini esterne
+\usepackage{lipsum} % genera testo fittizio
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry} %impaginazione e margini documento
+\usepackage[fontsize=13pt]{scrextend} %dimensione font
+\usepackage[%  
+    colorlinks=true,
+    pdfborder={0 0 0},
+    linkcolor=red,
+    urlcolor=red
+]{hyperref}
+\raggedbottom % Se la pagina non è completa, lascia lo spazio alla fine
+\pagestyle{headings}
+\makeindex
+\begin{document}
+\clearpage
+% input file frontespizio.tex
+\input{frontespizio}
+\input{indici}
+\include{notes1}
+\include{notes2}
+
+\end{document}
